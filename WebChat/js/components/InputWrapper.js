@@ -1,9 +1,10 @@
 import BaseComponent from "../BaseComponent.js";
 
 export default class InputWrapper extends BaseComponent {
-    
-    render () {
+
+    render() {
         console.log(this.props);
+        
         let $container = document.createElement('div');
         $container.classList.add('form-group');
 
@@ -16,7 +17,7 @@ export default class InputWrapper extends BaseComponent {
 
         let $error = document.createElement('div');
         $error.classList.add('text-danger');
-        $error.innerHTML = this.props.error;;
+        $error.innerHTML = this.props.error;
 
         $container.append($input, $error);
         return $container;
