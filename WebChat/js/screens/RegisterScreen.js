@@ -1,6 +1,7 @@
 import BaseComponent from "../BaseComponent.js";
 import InputWrapper from "../components/InputWrapper.js";
 
+import { register } from "../models/user.js";
 import { appendTo, validateEmail } from "../utils.js";
 
 export default class RegisterScreen extends BaseComponent {
@@ -112,26 +113,38 @@ export default class RegisterScreen extends BaseComponent {
         errors.password = '';
         errors.confirmPassword = '';
 
+        let isPassed = true;
+
         if(data.name == '') {
             errors.name = 'Invalid name';
+            isPassed = false;
         }
 
         if(data.email == '' || !validateEmail(data.email)) {
             errors.email = 'Invalid email';
+            isPassed = false;
         }
 
         if(data.password == '') {
             errors.password = 'Invalid password';
+            isPassed = false;
         }
 
         if(data.confirmPassword == '') {
             errors.confirmPassword = 'Invalid password confirmation';
+            isPassed = false;
         }
 
         if(data.password != '' && data.confirmPassword != '' && data.password != data.confirmPassword) {
             errors.confirmPassword = 'Password confirmation is not correct';
+            isPassed = false;
         }
         
+        if (isPassed) {
+            register(data.name, data.email, data.password);
+            return;
+        }
+
         let tmpState = this.state;
         tmpState.errors = errors;
         this.setState(tmpState);
