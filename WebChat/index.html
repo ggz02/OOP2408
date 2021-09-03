@@ -18,25 +18,23 @@
 
     <link rel="stylesheet" href="./css/app.css">
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script>
         const firebaseConfig = {
-            apiKey: "AIzaSyAyWME3EIcMCMph38pYAL9RjOGg4zcTEUw",
-            authDomain: "ci65-4b3ef.firebaseapp.com",
-            projectId: "ci65-4b3ef",
-            storageBucket: "ci65-4b3ef.appspot.com",
-            messagingSenderId: "500127543029",
-            appId: "1:500127543029:web:731235b82aaf7d24479fbc"
+            apiKey: "AIzaSyDMb_pXM4DT6VclrgXd0uDa5GRfhL5LdrY",
+            authDomain: "ci65-a4132.firebaseapp.com",
+            projectId: "ci65-a4132",
+            storageBucket: "ci65-a4132.appspot.com",
+            messagingSenderId: "974991132858",
+            appId: "1:974991132858:web:58996c3e831f31482d9a83"
         };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-    </script>
+        const firebaseApp = firebase.initializeApp(firebaseConfig);
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+     </script>
 </head>
 
 <body>

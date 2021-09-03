@@ -9,9 +9,9 @@ import { appendTo } from "./utils.js";
 
 
 let $app = document.getElementById('app');
-appendTo($app, new RegisterScreen());
+appendTo($app, new LoginScreen());
 
-$app.append(new RegisterScreen().render()); //render là 
+// $app.append(new RegisterScreen().render()); //render là 
 // let hello = document.getElementById('hello');
 
 // let $h2 = document.createElement('h2');
