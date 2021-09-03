@@ -17,10 +17,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="./css/app.css">
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAyWME3EIcMCMph38pYAL9RjOGg4zcTEUw",
+            authDomain: "ci65-4b3ef.firebaseapp.com",
+            projectId: "ci65-4b3ef",
+            storageBucket: "ci65-4b3ef.appspot.com",
+            messagingSenderId: "500127543029",
+            appId: "1:500127543029:web:731235b82aaf7d24479fbc"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+    </div>
+
+    <!-- // action: điểm đến để xử lý khi form submit
+        nếu không khai báo action => mặc định action là trang hiện tại để xử lý form => có hiện tượng reload trang
+    <form action=""></form> -->
 
     <script src="./js/app.js" type="module"></script>
 </body>
